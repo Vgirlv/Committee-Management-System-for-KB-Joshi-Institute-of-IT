@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+
+
+        <h4>KBJCommit-Con</h4>
+        <h6>One Stop Destination for Committee Management </h6>
+
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about.html" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              About
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="about.html">About Us</a></li>
+              <li>
+                <hr class="dropdown-divider">
+
+              </li>
+              <li><a class="dropdown-item" href="staff.html">Admins</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Committees
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="ecell.html">Entrepreneurship Cell</a></li>
+              <li>
+                <hr class="dropdown-divider">
+
+              </li>
+              <li><a class="dropdown-item" href="cult.html">Cultural Committee</a></li>
+              <li>
+                <hr class="dropdown-divider">
+
+              </li>
+              <li><a class="dropdown-item" href="grc.html">Green Club Committee</a></li>
+            
+            </ul>
+          </li>
+
+         
+
+
+        <li class="nav-item">
+          <a class="nav-link" href="faq.html">FAQs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="blog.html">Highlights</a>
+        </li>
+
+        <div class="container d-flex align-items-center gap-2">
+          <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+          <button type="button" class="btn btn-info" data-bs-toggle="modal"
+            data-bs-target="#registerModal">Register</button>
+
+        </div>
+
+        </form>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--Carousel-->
+  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="K._B._Joshi_Institute_of_Informa.avif" class="d-block w-100 img-fluid" alt="ClubbedIN">
+        <div class="carousel-caption d-none d-md-block">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="C9A5077-scaled.jpg" class="d-block w-100 img-fluid" alt="ClubbedIN">
+        <div class="carousel-caption d-none d-md-block">
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="Picture13.jpg" class="d-block w-100 img-fluid" alt="ClubbedIN">
+        <div class="carousel-caption d-none d-md-block">
+
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+    <!-- Chatbot Button inside the Carousel -->
+
+
+  </div>
+  <style>
+    /* Reduce carousel height and ensure images fit */
+    #carouselExample {
+      max-height: 450px;
+      /* Adjust this height as needed */
+      overflow: hidden;
+    }
+
+    #carouselExample .carousel-item img {
+      height: 450px;
+      /* Adjust as needed */
+      object-fit: cover;
+      /* Ensures images cover the space properly */
+    }
+  </style>
+
+
+
+  <!-- loginModal -->
+
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="loginModalLabel">Admin Sign-in</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="adminlogin.php" method="POST">
+                    <div class="mb-3">
+                        <label for="loginEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="loginEmail" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="loginPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="loginPassword" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+  <!-- registerModal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="registerModalLabel">Admin Sign-Up</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="adminregister.php" method="POST">
+                    <div class="mb-3">
+                        <label for="registerName" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="registerName" name="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="registerEmail" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="registerPassword" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="registerPassword" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-success">Register</button>
+                    <script>
+                      document.querySelector("form").addEventListener("submit", function (e) {
+                          const password = document.querySelector("input[name='password']").value;
+                          const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[\W_]).{8,}$/;
+                      
+                          if (!passwordRegex.test(password)) {
+                              alert("Password must be at least 8 characters long, alphanumeric, and include at least one special character.");
+                              e.preventDefault();
+                          }
+                      });
+                      </script>
+                      
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+  <!--card-->
+  <div class="container" style="margin-top: 50px;">
+    <div class="card mb-3 mx-auto" style="width: 1000px; height: 500px;">
+      <div class="row g-0 h-100">
+        <!-- Set width to 50% so the image takes half of the card -->
+        <div class="col-md-6" style="width: 38%; height: 100%;">
+          <img src="1687949579phpTiCTiI.jpeg" class="img-fluid rounded-start" alt=" "
+            style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <!-- Content section should also take 50% width -->
+        <div class="col-md-6" style="width: 50%;">
+          <div class="card-body d-flex flex-column justify-content-center h-100">
+            <h2 class="card-title">KB Joshi Institute of IT </h2>
+
+            <h4>Empowerment of Women through IT Education
+
+            </h4>
+            <p class="card-text">K. B. Joshi Institute of Information Technology established in the year 2003. Joshi
+              Foundation has given generous donation for the construction of the Institute in the name of Pioneering
+              businessman Late. K. B. Joshi who was founder member of several trade groups and trade association
+              including Maharashtra Chamber of Commerce.
+
+              <br>
+            </p>
+            <p class="card-text">Our meticulous thinking in framing up the curriculum, state of art infrastructure with
+              innovative back-up,
+              interactive exposure to the key happenings in the world of IT, makes our students understand the
+              contemporary and future scenario. They are ready to meet pre-requisites of IT world. The Institute is
+              basically interested in issues related to women in IT. It is committed to develop young women IT
+              professionals for the avenues opened up due to tremendous growth of IT sector in every field.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <div class="pe-lg-3">
+            <h1 class="display-3 fw-bold mb-4">Launching
+              <span class="text-success">KBJCommit-Con</span>
+            </h1>
+            <p class="lead fw-bold mb-4">KBJCommit-Con is a dynamic and efficient committee management system designed to
+              streamline campus organizations. From entrepreneurship cells to cultural clubs, it can manage all. With a
+              sleek interface and smart framework, KBCommit-Con ensures hassle-free management, empowering committees to
+              focus on growth and impact.
+            </p>
+          </div>
+          <div class="d-grid d-sm-flex">
+            <a class="btn btn-lg btn-outline-dark me-2 mb-3 mb-sm-0" href="about.html"><b>Learn More</b></a>
+          </div>
+        </div>
+        <div class="col-lg-6"><img alt="Image Description" class="img-fluid" src="nec.jpeg"></div>
+      </div>
+      <div class="row mt-5">
+        <div class="col-sm-4 mb-3 mb-sm-0">
+          <h2 class="display-5 fw-bold">Manage</h2>
+          <p>Manage your committees efficiently</p>
+        </div>
+        <div class="col-sm-4 mb-3 mb-sm-0">
+          <h2 class="display-5 fw-bold">Organize</h2>
+          <p>KBCommit-Con helps you organize effortlessly</p>
+        </div>
+        <div class="col-sm-4">
+          <h2 class="display-5 fw-bold">Thrive</h2>
+          <p>Elevate & Stand-out with Us</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <div class="container py-5">
+    <!-- Section Header -->
+    <div class="text-center mb-4">
+      <h1 class="fw-bold">Truly all-in-one</h1>
+      <p class="text-muted">KBJCommit-Con can serves the Committees with proficiency and efficiency.</p>
+    </div>
+
+    <!-- Business Types Grid -->
+
+
+    <div class="row g-4 text-center">
+      <div class="col-md-3 col-sm-6">
+        <div class="p-3 border rounded">
+          <img src="analytics-chart-diagram-svgrepo-com.svg" class="img-fluid mb-2">
+          <h5>Entrepreneurship Development Cell</h5>
+          <button type="button" class="btn btn-success" data-bs-toggle="popover" data-bs-placement="top"
+            data-bs-html="true"
+            data-bs-content="<button type='button' class='btn-close float-end' onclick='closePopover(this)'></button>
+                    <strong>Entrepreneurship Cell</strong><p>The EDC fosters entrepreneurship and innovation among students by organizing workshops and mentorship programs.</p>">
+            Learn More
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="p-3 border rounded">
+          <img src="man-dancing-svgrepo-com.svg" class="img-fluid mb-2">
+          <h5>Cultural - Dance/Drama/Music</h5>
+          <button type="button" class="btn btn-success" data-bs-toggle="popover" data-bs-placement="top"
+            data-bs-html="true"
+            data-bs-content="<button type='button' class='btn-close float-end' onclick='closePopover(this)'></button>
+                    <strong>Cultural Committee</strong><p>The Cultural Cell nurtures creativity through dance, drama, and music events throughout the year.</p>">
+            Learn More
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="p-3 border rounded">
+          <img src="shout-svgrepo-com.svg" class="img-fluid mb-2">
+          <h5>Anti-Ragging and Grievance Redressal</h5>
+          <button type="button" class="btn btn-success" data-bs-toggle="popover" data-bs-placement="top"
+            data-bs-html="true"
+            data-bs-content="<button type='button' class='btn-close float-end' onclick='closePopover(this)'></button>
+                    <strong>Anti-Ragging Committee</strong><p>This cell ensures a safe campus environment by addressing student grievances and preventing ragging incidents.</p>">
+            Learn More
+          </button>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-sm-6">
+        <div class="p-3 border rounded">
+          <img src="beautiful-scenery-svgrepo-com.svg" class="img-fluid mb-2">
+          <h5>Green Club / Environment Cell</h5>
+          <button type="button" class="btn btn-success" data-bs-toggle="popover" data-bs-placement="top"
+            data-bs-html="true"
+            data-bs-content="<button type='button' class='btn-close float-end' onclick='closePopover(this)'></button>
+                    <strong>Green Club</strong><p>The Green Club promotes sustainability through environmental awareness campaigns and eco-friendly initiatives.</p>">
+            Learn More
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Initialize Bootstrap popovers
+      document.addEventListener("DOMContentLoaded", function () {
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'));
+        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+          return new bootstrap.Popover(popoverTriggerEl);
+        });
+      });
+
+      // Function to close popovers
+      function closePopover(button) {
+        let popover = bootstrap.Popover.getInstance(button.closest('.popover'));
+        popover.hide();
+      }
+    </script>
+
+
+
+
+
+    <!-- Testimonials Section -->
+    <div class="container mt-5">
+      <h2 class="text-center mb-4 fw-bold">Testimonials</h2>
+
+
+      <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="max-width: 600px;">
+                <div class="card-body text-center">
+                  <p class="card-text">"KBJCommit-Con has transformed how we manage our University Cells. It’s simple,
+                    efficient, and an absolute game-changer!"</p>
+                  <h5 class="card-title">- Manali Sapkal</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="max-width: 600px;">
+                <div class="card-body text-center">
+                  <p class="card-text">"Managing committees and cells was a nightmare before KBJCommit-Con. Now, it’s
+                    effortless and fun!"</p>
+                  <h5 class="card-title">- Pritee Patil</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="d-flex justify-content-center">
+              <div class="card shadow p-3 mb-5 bg-white rounded" style="max-width: 600px;">
+                <div class="card-body text-center">
+                  <p class="card-text">"The best platform for organizing committees! Everything is in one place, and
+                    it’s
+                    so
+                    easy to use."</p>
+                  <h5 class="card-title">- Vaishali Harsulkar</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-dark rounded-circle p-2" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    
+  
+
+
+
+    <footer class="py-4">
+      <div class="container">
+        <div class="d-lg-flex justify-content-between py-3 py-lg-2">
+          <div class="small mb-2 mb-lg-0">
+            <p class="text-muted mb-0 me-5">© 2025 KBJCommit-Con.in All rights reserved.</p>
+          </div>
+          <div class="d-flex small align-items-end justify-content-between">
+            <div>
+              <a class="d-block d-lg-inline text-muted ms-lg-3 mb-2 mb-lg-0" href="index.html">Home</a> <a
+                class="d-block d-lg-inline text-muted ms-lg-3 mb-2 mb-lg-0" href="about.html">About </a><a
+                class="d-block d-lg-inline text-muted ms-lg-3 mb-2 mb-lg-0" href="">Testimonials</a> <a
+                class="d-block d-lg-inline text-muted ms-lg-3 mb-2 mb-lg-0" href="service.html">Services</a> <a
+                class="d-block d-lg-inline text-muted ms-lg-3" href="">Privacy Policy</a><a
+                class="d-block d-lg-inline text-muted ms-lg-3 mb-2 mb-lg-0" href="contact.html">Contact Us</a>
+            </div>
+            <div class="d-none d-lg-block ms-3">
+              <a class="me-2" href=""><svg class="bi bi-pinterest text-primary" fill="currentColor" height="16"
+                  viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z">
+                  </path>
+                </svg></a> <a class="me-2" href=""><svg class="bi bi-twitter text-primary" fill="currentColor"
+                  height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+                  </path>
+                </svg></a> <a class="me-2" href=""><svg class="bi bi-facebook text-primary" fill="currentColor"
+                  height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+                  </path>
+                </svg></a>
+            </div>
+            <div class="d-lg-none">
+              <a class="me-2" href=""><svg class="bi bi-pinterest text-primary" fill="currentColor" height="16"
+                  viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0z">
+                  </path>
+                </svg></a> <a class="me-2" href=""><svg class="bi bi-twitter text-primary" fill="currentColor"
+                  height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+                  </path>
+                </svg></a> <a class="me-2" href=""><svg class="bi bi-facebook text-primary" fill="currentColor"
+                  height="16" viewbox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z">
+                  </path>
+                </svg></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
